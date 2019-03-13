@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nirmal.gaminghub.StretagyFragment"
+    android:background="@drawable/header_bkgrnd">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView4"
+        android:background="#9c3d3d3d">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clash of Clans"
+                android:id="@+id/textView11"
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="40dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gm151"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/coc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Angry Birds 2"
+                android:id="@+id/textView12"
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="40dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gm171"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ab2" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

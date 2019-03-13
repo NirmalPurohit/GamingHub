@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nirmal.gaminghub.RacingFragment"
+    android:background="@drawable/header_bkgrnd">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView3"
+        android:background="#9c3d3d3d">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Need For Speed The Run"
+                android:id="@+id/textView8"
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="40dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gm213"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/nfstr"
+                android:clickable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Need For Speed Most Wanted 2012"
+                android:id="@+id/textView9"
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="40dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gm131"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/nfsmw2"
+                android:clickable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Asphalt 8: airborne"
+                android:id="@+id/textView10"
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="40dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gm516"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/aspahalt8"
+                android:clickable="true" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

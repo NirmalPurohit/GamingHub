@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nirmal.gaminghub.GamesFragment"
+    android:id="@+id/list_container"
+    android:background="@drawable/header_bkgrnd">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView2"
+        android:background="#9c3d3d3d">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minWidth="400dp"
+            android:nestedScrollingEnabled="true"
+            android:minHeight="400dp"
+            android:visibility="visible"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Assassin&apos;s Creed"
+                android:id="@+id/textView2"
+                android:autoText="false"
+                android:layout_marginTop="50dp"
+                android:textColor="#ffffff"
+                android:textSize="40dp"
+                android:textAlignment="center" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gm123"
+                android:background="@drawable/ac1"
+                android:clickable="true"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Assassin&apos;s Creed 2"
+                android:id="@+id/textView4"
+                android:autoText="true"
+                android:layout_marginTop="50dp"
+                android:textColor="#ffffff"
+                android:textSize="40dp"
+                android:textAlignment="center" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gm234"
+                android:background="@drawable/ac2"
+                android:clickable="true"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Assassin&apos;s Creed BrotherHood"
+                android:id="@+id/textView5"
+                android:autoText="true"
+                android:layout_marginTop="50dp"
+                android:textColor="#ffffff"
+                android:textSize="40dp"
+                android:textAlignment="center" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gm345"
+                android:background="@drawable/acbh"
+                android:clickable="true"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Assassin&apos;s Creed Revelation"
+                android:id="@+id/textView6"
+                android:autoText="true"
+                android:layout_marginTop="50dp"
+                android:textColor="#ffffff"
+                android:textSize="40dp"
+                android:textAlignment="center" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gm141"
+                android:background="@drawable/cry3"
+                android:clickable="true"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grand Theft Auto v"
+                android:id="@+id/textView7"
+                android:autoText="true"
+                android:layout_marginTop="50dp"
+                android:textColor="#ffffff"
+                android:textSize="40dp"
+                android:textAlignment="center" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gm617"
+                android:background="@drawable/gta5"
+                android:clickable="true"
+                android:layout_marginTop="20dp"
+                android:longClickable="false"
+                android:adjustViewBounds="false" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

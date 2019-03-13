@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Gaming Hub</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="home_inst">"Welcome to Gaming Hub.Enjoy surfing and shoping of Various games,but before doing so please follow certain instructions mentioned below:\n\n
+        1. Surfing and viewing games and game content is totally free.\n
+        2. If you want to purchase any game from our app, then you need to login first and follow simple steps.\n
+        3. You can also view tour purchase list by loging in to our app in My purchases option through navigation drawer.\n
+        4. Login details and password are safe with us at our server database. \n
+        5. Whatever password you select please remember or save it at safe place and use it afterwards, because we are working on "foget password function".\n
+        6. If you are uploading any game, then we'll also be checking on your company's existance and reputaion. So, no unauthorized user can upload contant to our app server."
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_details_of_game">Details Of Game Selected</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_register">Register</string>
+    <string name="title_activity_my_purchase">MyPurchase</string>
+</resources>

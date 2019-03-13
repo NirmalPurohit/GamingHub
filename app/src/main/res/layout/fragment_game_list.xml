@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:id="@+id/list_fragment"
+    tools:context="com.example.nirmal.gaminghub.GameListFragment"
+    android:visibility="visible"
+    android:background="@drawable/header_bkgrnd">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/racing_img"
+        android:background="@drawable/racing"
+        android:layout_marginTop="200dp" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:id="@+id/action_img"
+        android:background="@drawable/action"
+        android:layout_marginTop="120dp" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/stretagy_img"
+        android:background="@drawable/stretagy"
+        android:layout_marginTop="300dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Racing Games"
+        android:id="@+id/racing"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="230dp"
+        android:layout_marginLeft="150dp"
+        android:clickable="true"
+        android:autoText="false"
+        android:background="#8d989898" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/action"
+        android:text="Action Games"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:layout_marginTop="140dp"
+        android:layout_marginLeft="150dp"
+        android:background="#8d989898" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Stretagy Games"
+        android:id="@+id/stretagy"
+        android:textColor="#ffffff"
+        android:textSize="28dp"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="330dp"
+        android:layout_marginLeft="150dp"
+        android:clickable="true"
+        android:background="#8d989898" />
+
+</RelativeLayout>
