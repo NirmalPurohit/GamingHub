@@ -55,7 +55,6 @@ public class StretagyFragment extends Fragment {
                               detailsOfGameActivity.putExtras(bundle);
                               startActivity(detailsOfGameActivity);
                               break;
-
                       }
                   }
               }
