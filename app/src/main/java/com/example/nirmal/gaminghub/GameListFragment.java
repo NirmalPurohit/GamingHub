@@ -15,25 +15,16 @@ import android.widget.TextView;
  * A simple {@link Fragment} subclass.
  */
 public class GameListFragment extends Fragment {
-
-
     public GameListFragment() {
         // Required empty public constructor
     }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-
-
         return inflater.inflate(R.layout.fragment_game_list, container, false);
     }
-
     public void onViewCreated(View view, Bundle savedInstanceState)
     {
-
         //---------------------calling action games--------------------------------------------------------------------------------
         final TextView action_opt=(TextView)getView().findViewById(R.id.action);
         action_opt.setOnClickListener(new View.OnClickListener()
@@ -48,7 +39,6 @@ public class GameListFragment extends Fragment {
                                          }
                                       }
         );
-
         //-------------------------calling Racing games--------------------------------------------------------------------------
         final TextView racing_opt=(TextView)getView().findViewById(R.id.racing);
         racing_opt.setOnClickListener(new View.OnClickListener()
@@ -63,7 +53,6 @@ public class GameListFragment extends Fragment {
                                          }
                                       }
         );
-
         //=======================calling stretagy games------------------------------------------------------------------------
         final TextView stretady_opt=(TextView)getView().findViewById(R.id.stretagy);
         stretady_opt.setOnClickListener(new View.OnClickListener()
@@ -79,5 +68,4 @@ public class GameListFragment extends Fragment {
                                         }
         );
     }
-
 }
