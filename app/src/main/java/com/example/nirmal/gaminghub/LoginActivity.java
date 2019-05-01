@@ -25,7 +25,6 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 public class LoginActivity extends AppCompatActivity {
-
     Button registerLink = null;
     EditText username = null;
     EditText password = null;
@@ -45,9 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         registerLink = (Button) findViewById(R.id.registerlink);
         Bundle bundle=getIntent().getExtras();
         value=bundle.getString("game");
-
         registerLink.setOnClickListener(new View.OnClickListener() {
-
                                             @Override
                                             public void onClick(View v) {
                                                 Log.d("Login", "Register call");
@@ -63,66 +60,38 @@ public class LoginActivity extends AppCompatActivity {
                                      public void onClick(View v) {
                                          uname = username.getText().toString();
                                          pass = password.getText().toString();
-                                        /* Bundle bundle = getIntent().getExtras();
-                                         value = bundle.getString("game");*/
                                          new LoginTask().execute();
-
-
                                      }
                                  }
         );
-
-
     }
-
-
     public class LoginTask extends AsyncTask<Void, Void, Void> {
         int flag = 0;
-      //  URL purchase = null;
-
         protected Void doInBackground(Void... params) {
-
             URL openUrl = null;
-
             try {
-                openUrl = new URL("http://192.168.1.4:8080/GamingHub/ShowUser");
-
-                // Toast.makeText(getApplicationContext(), "in async task ", Toast.LENGTH_LONG).show();
-
+                openUrl = new URL("http://<IP Adress>:8080/GamingHub/ShowUser");
                 HttpURLConnection connection = (HttpURLConnection) openUrl.openConnection();
-
                 connection.setRequestMethod("POST");
-                // connection.setDoInput(true);
                 connection.setDoOutput(true);
                 OutputStream os = connection.getOutputStream();
-                Log.d("After URL", "here");
                 BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(os, "iso-8859-1"));
                 Log.d("Button", "calling Async");
                 String data = URLEncoder.encode("uname", "UTF-8") + "=" + URLEncoder.encode(uname, "UTF-8") + "&" + URLEncoder.encode("pass", "UTF-8") + "=" + URLEncoder.encode(pass, "UTF-8");
-
                 bw.write(data);
                 bw.close();
-                //   connection.setDoInput(true);
                 BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream(), "iso-8859-1"));
-
                 String line = "";
-
                 while ((line = br.readLine()) != null) {
                     if (line.equals("ok")) {
-
                         flag = 1;
                     }
-
                 }
-                // Log.d("AsyncTask", line);
                 br.close();
-
-            } catch (Exception e) {
-            }
-
+            } 
+            catch (Exception e) {}
             return null;
         }
-
         public void onPostExecute(Void result) {
             if (flag == 1) {
                     Toast.makeText(LoginActivity.this, "Logged In", Toast.LENGTH_SHORT).show();
@@ -130,8 +99,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         }
     }
-
-
     public class PurchaseTask extends AsyncTask<Void, Void, Void>
     {
         URL purchase=null;
@@ -147,25 +114,18 @@ public class LoginActivity extends AppCompatActivity {
                 BufferedWriter bwp = new BufferedWriter(new OutputStreamWriter(osp, "iso-8859-1"));
                 Log.d("purchase","buffer");
                 String datap = URLEncoder.encode("uname", "UTF-8") + "=" + URLEncoder.encode(uname, "UTF-8") + "&" + URLEncoder.encode("gameid", "UTF-8") + "=" + URLEncoder.encode(value, "UTF-8");
-
                 bwp.write(datap);
                 Log.d("purchase", "Write");
                 bwp.close();
                 BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream(),"iso-8859-1"));
-
                 String line = "";
-
                 while ((line = br.readLine()) != null) {
                     if(line.equals("ok"))
                         flag=1;
                 }
                 br.close();
-
             }
-            catch(Exception e)
-            {
-
-            }
+            catch(Exception e){}
             return null;
         }
         public void onPostExecute(Void result) {
