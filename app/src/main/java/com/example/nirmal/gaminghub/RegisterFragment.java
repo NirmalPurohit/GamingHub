@@ -1,6 +1,5 @@
 package com.example.nirmal.gaminghub;
 
-
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -27,25 +26,18 @@ import java.net.URLEncoder;
  * A simple {@link Fragment} subclass.
  */
 public class RegisterFragment extends Fragment {
-
     EditText name=null;
     EditText password=null;
     EditText age=null;
     Button reg=null;
-
     String uname="";
     String pass="";
-    String ag=""
-;
-    public RegisterFragment() {
-        // Required empty public constructor
-    }
-
+    String ag="";
+    public RegisterFragment() {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_register, container, false);
     }
 
@@ -75,23 +67,17 @@ public class RegisterFragment extends Fragment {
         public Void doInBackground(Void... params)
         {
             try {
-                URL openUrl = new URL("http://192.168.1.4:8080/GamingHub/insert");
-                // Toast.makeText(getApplicationContext(), "in async task ", Toast.LENGTH_LONG).show();
-
+                URL openUrl = new URL("http://<IP Adress>:8080/GamingHub/insert");
                 HttpURLConnection connection = (HttpURLConnection) openUrl.openConnection();
-
                 connection.setRequestMethod("POST");
                 connection.setDoInput(true);
                 connection.setDoOutput(true);
                 OutputStream os=connection.getOutputStream();
-                // Log.d("After URL","here");
                 BufferedWriter bw=new BufferedWriter(new OutputStreamWriter(os,"UTF-8"));
                 String data= URLEncoder.encode("uname", "UTF-8")+"="+URLEncoder.encode(uname,"UTF-8")+"&"+URLEncoder.encode("pass","UTF-8")+"="+URLEncoder.encode(pass,"UTF-8")+"&"+URLEncoder.encode("age","UTF-8")+"="+URLEncoder.encode(ag,"UTF-8");
                 bw.write(data);
                 bw.close();
-                //   connection.setDoInput(true);
                 BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream(),"iso-8859-1"));
-
                 String line = "";
 
                 while ((line = br.readLine()) != null) {
@@ -99,10 +85,8 @@ public class RegisterFragment extends Fragment {
                         flag=1;
                 }
                 br.close();
-
             } catch (Exception e) {
                 e.printStackTrace();
-                // Toast.makeText(getApplicationContext(), "in async task exception", Toast.LENGTH_LONG).show();
             }
             return null;
         }
