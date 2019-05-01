@@ -40,10 +40,8 @@ public class ShowDataServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try  {
             String ID=request.getParameter("gameid");
-             Class.forName("com.mysql.jdbc.Driver"); 
-           
-            Connection con=DriverManager.getConnection(  
-				"jdbc:mysql://localhost:3306/gaming_hub_db","root","");
+            Class.forName("com.mysql.jdbc.Driver"); 
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/gaming_hub_db","root","");
             String sql="SELECT * from games where gm_id=?";
             PreparedStatement ps=con.prepareStatement(sql);
             ps.setString(1,ID);
