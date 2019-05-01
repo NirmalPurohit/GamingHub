@@ -61,22 +61,16 @@ public class DetailsOfGame extends AppCompatActivity {
     }
 
     public class ViewDetailsTask extends AsyncTask<Void, Void, Void> {
-
         StringBuilder getOutput = new StringBuilder();
-
         DetailsOfGame detailsOfGame=null;
-        ViewDetailsTask(DetailsOfGame detailsOfGame)
-        {
+        ViewDetailsTask(DetailsOfGame detailsOfGame){
             this.detailsOfGame=detailsOfGame;
         }
-        protected Void doInBackground(Void... param) {
-
+        protected Void doInBackground(Void... param){
             try {
                 String gmID=gameID;
-                URL openUrl = new URL("http://192.168.1.4:8080/GamingHub/ShowDataServlet");
-
+                URL openUrl = new URL("http://<IP Adress>:8080/GamingHub/ShowDataServlet");
                 HttpURLConnection connection = (HttpURLConnection) openUrl.openConnection();
-
                 connection.setRequestMethod("POST");
                 connection.setDoInput(true);
                 connection.setDoOutput(true);
@@ -86,25 +80,19 @@ public class DetailsOfGame extends AppCompatActivity {
                 bw.write(data);
                 bw.close();
                 BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream(),"iso-8859-1"));
-
                 String line = "";
-
                 while ((line = br.readLine()) != null) {
                     getOutput.append(line+"\n");
                 }
                 br.close();
-
             } catch (Exception e) {
                 e.printStackTrace();
             }
             return null;
         }
-        protected void onPostExecute(Void result)
-        {
-
+        protected void onPostExecute(Void result){
             tv.setText(getOutput);
             ll.setBackgroundResource(R.drawable.image);
         }
     }
-
 }
