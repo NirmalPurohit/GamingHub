@@ -1,6 +1,5 @@
 package com.example.nirmal.gaminghub;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,27 +13,19 @@ import android.widget.ImageButton;
  * A simple {@link Fragment} subclass.
  */
 public class StretagyFragment extends Fragment {
-
-
-    public StretagyFragment() {
-        // Required empty public constructor
-    }
-
+    public StretagyFragment() {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_stretagy, container, false);
     }
-
 
     public void onViewCreated(View view, Bundle savedInstanceState)
     {
 
         ImageButton bt1 = null;
         ImageButton bt2 = null;
-      //  ImageButton bt3 = null;
         final ImageButton imgbtns[]={bt1,bt2};
         int ids[]={R.id.gm151,R.id.gm171};
         for(int i=0;i<imgbtns.length;i++)
@@ -43,39 +34,32 @@ public class StretagyFragment extends Fragment {
             final ImageButton temp=imgbtns[i];
 
             imgbtns[i].setOnClickListener(new View.OnClickListener()
-                                          {
-                                              Intent detailsOfGameActivity=new Intent(getActivity(),DetailsOfGame.class);
-                                              Bundle bundle = new Bundle();
+              {
+                  Intent detailsOfGameActivity=new Intent(getActivity(),DetailsOfGame.class);
+                  Bundle bundle = new Bundle();
 
-                                              public void onClick(View v)
-                                              {
-                                                  String ID=temp.getResources().getResourceEntryName(temp.getId());
-                                                  switch(ID)
-                                                  {
-                                                      case "gm151":
-                                                          //  Log.d("Racing", "gm312");
-                                                          bundle.putString("gameid",ID);
-                                                          detailsOfGameActivity.putExtras(bundle);
-                                                          startActivity(detailsOfGameActivity);
-                                                          break;
+                  public void onClick(View v)
+                  {
+                      String ID=temp.getResources().getResourceEntryName(temp.getId());
+                      switch(ID)
+                      {
+                          case "gm151":
+                              //  Log.d("Racing", "gm312");
+                              bundle.putString("gameid",ID);
+                              detailsOfGameActivity.putExtras(bundle);
+                              startActivity(detailsOfGameActivity);
+                              break;
 
-                                                      case "gm171":
-                                                          bundle.putString("gameid",ID);
-                                                          detailsOfGameActivity.putExtras(bundle);
-                                                          startActivity(detailsOfGameActivity);
-                                                          break;
+                          case "gm171":
+                              bundle.putString("gameid",ID);
+                              detailsOfGameActivity.putExtras(bundle);
+                              startActivity(detailsOfGameActivity);
+                              break;
 
-                                                  }
-                                              }
-                                          }
+                      }
+                  }
+              }
             );
-
-
-
         }
-
-
     }
-
-
 }
