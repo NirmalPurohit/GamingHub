@@ -10,13 +10,8 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
 public class GameListFragment extends Fragment {
     public GameListFragment() {
-        // Required empty public constructor
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
