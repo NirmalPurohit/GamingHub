@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.gaming_hub;
 
 import java.io.IOException;
@@ -38,31 +33,20 @@ public class ShowUser extends HttpServlet {
             throws ServletException, IOException, SQLException, ClassNotFoundException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-         String username=request.getParameter("uname");
-         String password=request.getParameter("pass");
-             Class.forName("com.mysql.jdbc.Driver"); 
-           
-            Connection con=DriverManager.getConnection(  
-				"jdbc:mysql://localhost:3306/gaming_hub_db","root","");
-            String sql="SELECT * from customer where cust_name=? and cust_key=?";
-           // String ID=request.getParameter("gameid");
-            PreparedStatement ps=con.prepareStatement(sql);
-            ps.setString(1,username);
-            ps.setString(2,password);
-            ResultSet rs=ps.executeQuery();
-            //response.setContentType("image/jpg");
-           // DataOutputStream dout=new DataOutputStream();
-           
-            
-            while(rs.next())
-            {
+        String username=request.getParameter("uname");
+        String password=request.getParameter("pass");
+        Class.forName("com.mysql.jdbc.Driver");    
+        Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/gaming_hub_db","root","");
+        String sql="SELECT * from customer where cust_name=? and cust_key=?";
+    	PreparedStatement ps=con.prepareStatement(sql);
+    	ps.setString(1,username);
+    	ps.setString(2,password);
+    	ResultSet rs=ps.executeQuery();
+        while(rs.next()){
                 out.println("ok");
-                
-            }
         }
+      }
     }
-
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *
