@@ -20,7 +20,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 
-
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -31,7 +30,6 @@ public class MyPurchaseFragment extends Fragment {
     String uname=null;
     String pass=null;
     TextView content=null;
-
     public MyPurchaseFragment(){}
 
     @Override
