@@ -1,6 +1,5 @@
 package com.example.nirmal.gaminghub;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -17,15 +16,11 @@ import android.widget.ImageButton;
 public class RacingFragment extends Fragment {
 
 
-    public RacingFragment() {
-        // Required empty public constructor
-    }
-
+    public RacingFragment() {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_racing, container, false);
     }
 
@@ -43,44 +38,37 @@ public class RacingFragment extends Fragment {
             final ImageButton temp=imgbtns[i];
 
             imgbtns[i].setOnClickListener(new View.OnClickListener()
-                                          {
-                                              Intent detailsOfGameActivity=new Intent(getActivity(),DetailsOfGame.class);
-                                              Bundle bundle = new Bundle();
+              {
+                  Intent detailsOfGameActivity=new Intent(getActivity(),DetailsOfGame.class);
+                  Bundle bundle = new Bundle();
 
-                                              public void onClick(View v)
-                                              {
-                                                  String ID=temp.getResources().getResourceEntryName(temp.getId());
-                                                  switch(ID)
-                                                  {
-                                                      case "gm213":
-                                                        //  Log.d("Racing", "gm312");
-                                                          bundle.putString("gameid",ID);
-                                                          detailsOfGameActivity.putExtras(bundle);
-                                                          startActivity(detailsOfGameActivity);
-                                                          break;
+                  public void onClick(View v)
+                  {
+                      String ID=temp.getResources().getResourceEntryName(temp.getId());
+                      switch(ID)
+                      {
+                          case "gm213":
+                              bundle.putString("gameid",ID);
+                              detailsOfGameActivity.putExtras(bundle);
+                              startActivity(detailsOfGameActivity);
+                              break;
 
-                                                      case "gm131":
-                                                          bundle.putString("gameid",ID);
-                                                          detailsOfGameActivity.putExtras(bundle);
-                                                          startActivity(detailsOfGameActivity);
-                                                          break;
+                          case "gm131":
+                              bundle.putString("gameid",ID);
+                              detailsOfGameActivity.putExtras(bundle);
+                              startActivity(detailsOfGameActivity);
+                              break;
 
-                                                      case "gm516":
-                                                          bundle.putString("gameid",ID);
-                                                          detailsOfGameActivity.putExtras(bundle);
-                                                          startActivity(detailsOfGameActivity);
-                                                          break;
+                          case "gm516":
+                              bundle.putString("gameid",ID);
+                              detailsOfGameActivity.putExtras(bundle);
+                              startActivity(detailsOfGameActivity);
+                              break;
 
-                                                  }
-                                              }
-                                          }
+                      }
+                  }
+              }
             );
-
-
-
         }
-
-
     }
-
 }
